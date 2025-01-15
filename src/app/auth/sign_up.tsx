@@ -2,23 +2,22 @@ import {
     View, Text, TextInput, StyleSheet, TouchableOpacity
 } from 'react-native'
 
-
 import Header from '../../components/Header'
 import Button from '../../components/Button'
 
-const LogIn = (): JSX.Element => {
+const SignUp = (): JSX.Element => {
     return(
         <View style={styles.container}>
             <Header />
             <View style={styles.inner}>
-                <Text style={styles.title}>Log In</Text>
+                <Text style={styles.title}>Sign up</Text>
                 <TextInput style={styles.input} value='Email address' />
                 <TextInput style={styles.input} value='Password' />
                 <Button label='Submit' />
                 <View style={styles.footer}>
-                    <Text style={styles.footerText}>Not registered?</Text>
+                    <Text style={styles.footerText}>Already registered?</Text>
                     <TouchableOpacity>
-                        <Text style={styles.footerLink}>Sign up here!</Text>
+                        <Text style={styles.footerLink}>Log in.</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -54,21 +53,6 @@ const styles = StyleSheet.create({
         marginBottom: 16
     },
 
-    button: {
-        backgroundColor: '#467FD3',
-        borderRadius: 4,
-        alignSelf: 'flex-start',
-        marginBottom: 24
-    },
-
-    buttonLabel: {
-        fontSize: 16,
-        lineHeight: 32,
-        color: '#FFFFFF',
-        paddingVertical: 8,
-        paddingHorizontal: 24
-    },
-
     footer: {
         flexDirection: 'row'
     },
@@ -87,4 +71,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default  LogIn
+export default  SignUp
